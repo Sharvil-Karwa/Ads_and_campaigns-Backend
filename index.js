@@ -17,7 +17,7 @@ mongoose
     app.use(express.json());
     app.use("/api", cors(), postRoutes);
     app.use("/api", cors(), productRoutes);
-    app.listen(5000, () => {
+    app.listen(process.env.PORT || 5000, () => {
       console.log("Server has started!");
     });
   });
